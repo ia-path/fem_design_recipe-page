@@ -27,19 +27,18 @@ body {
 	background-color: var(--Stone-100);
 }
 
-img.main-image {
+div.wrapper {
 	width: 100%;
+	max-width: 375px;
+}
+
+header img.img-header { 
+    display: block;
 }
 
 main.main-container {
-	width: 100%;
-	max-width: 375px;
     background-color: var(--White);
     padding: 40px 32px;
-}
-
-article {
-    border: solid black 1px;
 }
 
 h1, h3 {
@@ -65,10 +64,6 @@ ul, ol {
     list-style-position: inside;
 }
 
-ol {
-    list-style-position: inside;
-}
-
 li {
     color: var(--Stone-600);
     margin-left: 8px;
@@ -76,10 +71,6 @@ li {
 
 span.bold-normal {
     font-weight: 600;
-}
-
-section.container-recipe {
-    margin-bottom: 32px;
 }
 
 h1.main-title {
@@ -94,12 +85,14 @@ section {
 
 section.container-preparation {
     padding: 24px;
-    margin-bottom: 32px;
+    background-color: var(--Rose-50);
 }
 
 hr {
     margin-bottom: 32px;
-    color: var(--Stone-150);
+    border: none;        
+    height: 1px;         
+    background-color: var(--Stone-150); 
 }
 
 h2.preparation-title {
@@ -112,19 +105,44 @@ ul.preparation-list li::marker{
     color: var(--Rose-800);
 }     
 
-ul li::marker{
+ul li::marker, ol li::marker{
     color: var(--Brown-800);
+     font-weight: 800;
 } 
-
-ol li::marker{
-    color: var(--Brown-800);
-    font-weight: 800;
-}
-
+ 
 p.description-nutrition {
     margin-bottom: 24px;
 }
 
+li span.instruction {
+    margin-left: 16px;
+}
 
+table {
+    margin: auto;
+    width: 100%;
+}
 
+tr {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: solid 1px var(--Stone-150);
+}
 
+tr:last-child{
+    border: none;
+}
+
+td.elements {
+    color: var(--Stone-600);
+    width: 50%;
+    margin-left: 32px;
+}
+
+td.grams {
+    color: var(--Brown-800);
+    font-weight: 800;
+    width: 50%;
+    margin-left: 16px;
+}
