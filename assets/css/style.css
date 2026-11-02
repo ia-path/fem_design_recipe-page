@@ -31,11 +31,12 @@ div.wrapper {
     width: 100%;
     max-width: 375px;
     background-color: var(--White);
+    transition: 0.3s;
 }
 
-  header {
-        background-color: var(--White);
-    }
+header {
+    background-color: var(--White);
+}
 
 header img.img-header {
     display: block;
@@ -175,113 +176,25 @@ td.grams {
         padding: 40px;
         border-radius: 24px;
     }
+}
 
-    h1,
-    h3 {
-        font-family: "Young Serif", serif;
-        font-weight: 400;
-        font-style: normal;
-    }
+/* ---DESKTOP--- */
 
-    h3 {
-        font-size: 1.75rem;
-        color: var(--Brown-800);
-        margin-bottom: 24px;
-    }
-
-    p {
-        color: var(--Stone-600);
-    }
-
-    ul,
-    ol {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        list-style-position: inside;
-    }
-
-    li {
-        color: var(--Stone-600);
-        margin-left: 8px;
-    }
-
-    span.bold-normal {
-        font-weight: 600;
-    }
-
-    h1.main-title {
-        font-size: 2.5rem;
-        margin-bottom: 24px;
-        color: var(--Stone-900);
-    }
-
-    section {
-        margin-bottom: 32px;
-    }
-
-    section.container-preparation {
-        padding: 24px;
-        background-color: var(--Rose-50);
-    }
-
-    hr {
-        margin-bottom: 32px;
-        border: none;
-        height: 1px;
-        background-color: var(--Stone-150);
-    }
-
-    h2.preparation-title {
-        font-size: 1.25rem;
-        color: var(--Rose-800);
-        margin-bottom: 16px;
-    }
-
-    ul.preparation-list li::marker {
-        color: var(--Rose-800);
-    }
-
-    ul li::marker,
-    ol li::marker {
-        color: var(--Brown-800);
-        font-weight: 800;
-    }
-
-    p.description-nutrition {
-        margin-bottom: 24px;
-    }
-
-    li span.instruction {
-        margin-left: 16px;
-    }
-
-    table {
-        margin: auto;
+@media (min-width: 1440px) {
+    div.wrapper {
         width: 100%;
+        max-width: 736px;
+        padding-top: 40px;
+        border-radius: 24px;
     }
 
-    tr {
-        display: flex;
-        justify-content: space-between;
-        padding: 12px 0;
-        border-bottom: solid 1px var(--Stone-150);
+    header img.img-header {
+        margin: auto;
+        max-width: 656px;
     }
 
-    tr:last-child {
-        border: none;
-    }
-
-    td.elements {
-        color: var(--Stone-600);
-        width: 50%;
-        margin-left: 32px;
-    }
-
-    td.grams {
-        color: var(--Brown-800);
-        font-weight: 800;
-        width: 50%;
-        margin-left: 16px;
+    main.main-container {
+        padding: 40px;
+        border-radius: 24px;
     }
 }
