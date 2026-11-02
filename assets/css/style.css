@@ -1,39 +1,45 @@
 :root {
-	--White: #ffffff;
-	--Stone-100: #f3e6d8;
-	--Stone-150: #e3ddd7;
-	--Stone-600: #5f574e;
-	--Stone-900: #302d2c;
-	--Brown-800: #854632;
-	--Rose-800: #7b284f;
-	--Rose-50: #fff5fa;
+    --White: #ffffff;
+    --Stone-100: #f3e6d8;
+    --Stone-150: #e3ddd7;
+    --Stone-600: #5f574e;
+    --Stone-900: #302d2c;
+    --Brown-800: #854632;
+    --Rose-800: #7b284f;
+    --Rose-50: #fff5fa;
 }
 
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-	width: 100%;
-	min-height: 100dvh;
-	font-family: "Outfit", sans-serif;
-	font-optical-sizing: auto;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	background-color: var(--Stone-100);
+    width: 100%;
+    min-height: 100dvh;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Stone-100);
 }
 
 div.wrapper {
-	width: 100%;
-	max-width: 375px;
+    width: 100%;
+    max-width: 375px;
+    background-color: var(--White);
 }
 
-header img.img-header { 
+  header {
+        background-color: var(--White);
+    }
+
+header img.img-header {
     display: block;
+    width: 100%;
 }
 
 main.main-container {
@@ -41,10 +47,11 @@ main.main-container {
     padding: 40px 32px;
 }
 
-h1, h3 {
-	font-family: "Young Serif", serif;
-	font-weight: 400;
-	font-style: normal;
+h1,
+h3 {
+    font-family: "Young Serif", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 h3 {
@@ -57,7 +64,8 @@ p {
     color: var(--Stone-600);
 }
 
-ul, ol {
+ul,
+ol {
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -90,9 +98,9 @@ section.container-preparation {
 
 hr {
     margin-bottom: 32px;
-    border: none;        
-    height: 1px;         
-    background-color: var(--Stone-150); 
+    border: none;
+    height: 1px;
+    background-color: var(--Stone-150);
 }
 
 h2.preparation-title {
@@ -101,15 +109,16 @@ h2.preparation-title {
     margin-bottom: 16px;
 }
 
-ul.preparation-list li::marker{
+ul.preparation-list li::marker {
     color: var(--Rose-800);
-}     
+}
 
-ul li::marker, ol li::marker{
+ul li::marker,
+ol li::marker {
     color: var(--Brown-800);
-     font-weight: 800;
-} 
- 
+    font-weight: 800;
+}
+
 p.description-nutrition {
     margin-bottom: 24px;
 }
@@ -130,7 +139,7 @@ tr {
     border-bottom: solid 1px var(--Stone-150);
 }
 
-tr:last-child{
+tr:last-child {
     border: none;
 }
 
@@ -145,4 +154,134 @@ td.grams {
     font-weight: 800;
     width: 50%;
     margin-left: 16px;
+}
+
+/* ---TABLET--- */
+
+@media (min-width: 768px) {
+    div.wrapper {
+        width: 100%;
+        max-width: 616px;
+        padding-top: 40px;
+        border-radius: 24px;
+    }
+
+    header img.img-header {
+        margin: auto;
+        max-width: 536px;
+    }
+
+    main.main-container {
+        padding: 40px;
+        border-radius: 24px;
+    }
+
+    h1,
+    h3 {
+        font-family: "Young Serif", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    h3 {
+        font-size: 1.75rem;
+        color: var(--Brown-800);
+        margin-bottom: 24px;
+    }
+
+    p {
+        color: var(--Stone-600);
+    }
+
+    ul,
+    ol {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        list-style-position: inside;
+    }
+
+    li {
+        color: var(--Stone-600);
+        margin-left: 8px;
+    }
+
+    span.bold-normal {
+        font-weight: 600;
+    }
+
+    h1.main-title {
+        font-size: 2.5rem;
+        margin-bottom: 24px;
+        color: var(--Stone-900);
+    }
+
+    section {
+        margin-bottom: 32px;
+    }
+
+    section.container-preparation {
+        padding: 24px;
+        background-color: var(--Rose-50);
+    }
+
+    hr {
+        margin-bottom: 32px;
+        border: none;
+        height: 1px;
+        background-color: var(--Stone-150);
+    }
+
+    h2.preparation-title {
+        font-size: 1.25rem;
+        color: var(--Rose-800);
+        margin-bottom: 16px;
+    }
+
+    ul.preparation-list li::marker {
+        color: var(--Rose-800);
+    }
+
+    ul li::marker,
+    ol li::marker {
+        color: var(--Brown-800);
+        font-weight: 800;
+    }
+
+    p.description-nutrition {
+        margin-bottom: 24px;
+    }
+
+    li span.instruction {
+        margin-left: 16px;
+    }
+
+    table {
+        margin: auto;
+        width: 100%;
+    }
+
+    tr {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 0;
+        border-bottom: solid 1px var(--Stone-150);
+    }
+
+    tr:last-child {
+        border: none;
+    }
+
+    td.elements {
+        color: var(--Stone-600);
+        width: 50%;
+        margin-left: 32px;
+    }
+
+    td.grams {
+        color: var(--Brown-800);
+        font-weight: 800;
+        width: 50%;
+        margin-left: 16px;
+    }
 }
